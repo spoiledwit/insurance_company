@@ -37,7 +37,7 @@ const Login = () => {
     <div className="h-[90vh] flex items-center justify-center">
       <form
         onSubmit={(e) => handleSubmit(e)}
-        className="w-1/2 border p-10 shadow"
+        className="md:w-1/2 md:border p-10 md:shadow"
       >
         <h1 className="font-bold text-red-700 text-3xl my-2">
           Sign in to your account
