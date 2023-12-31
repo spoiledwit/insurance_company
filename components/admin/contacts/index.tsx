@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/table";
 import axios from "axios";
 import { toast } from "@/components/ui/use-toast";
+import * as exceljs from "exceljs";
+import { saveAs } from "file-saver";
 
 const Contacts = () => {
   const [data, setData] = useState([]);
@@ -23,8 +25,39 @@ const Contacts = () => {
   }, []);
 
   const download = async () => {
-    const response = await axios.get("api/excel");
-    toast({ title: response.data.message });
+    const workbook = new exceljs.Workbook();
+    const worksheet = workbook.addWorksheet("Contacts");
+    worksheet.columns = [
+      {
+        header: "First Name",
+        key: "fname",
+        width: 20,
+      },
+      {
+        header: "Last Name",
+        key: "lname",
+        width: 20,
+      },
+      {
+        header: "Email",
+        key: "email",
+        width: 30,
+      },
+      {
+        header: "Message",
+        key: "message",
+        width: 50,
+      },
+    ];
+    data.map((d: any) => {
+      worksheet.addRow(d);
+    });
+    worksheet.getRow(1).eachCell((c) => {
+      c.font = { bold: true };
+    });
+    const buf = await workbook.xlsx.writeBuffer();
+    saveAs(new Blob([buf]), "Contacts.xlsx");
+    toast({ title: "Downloaded Sussessfully" });
   };
 
   return (
