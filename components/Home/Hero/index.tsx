@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import img from "@/assets/animation1.gif";
