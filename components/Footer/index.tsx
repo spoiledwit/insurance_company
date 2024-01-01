@@ -14,7 +14,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { CiChat2 } from "react-icons/ci";
 const Footer = () => {
   return (
-    <footer className="bg-[#2e323e] text-[#999DA9] border-t border-t-red-700">
+    <footer className="text-[#999DA9] bg-red-800">
       <div className="p-5 md:p-10">
         <div className="flex justify-between items-start flex-wrap gap-8">
           <div>

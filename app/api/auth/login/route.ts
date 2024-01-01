@@ -1,10 +1,11 @@
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import AuthModel from "@/lib/db/models/auth";
 import { NextRequest, NextResponse } from "next/server";
+import dbConnect from "@/lib/db/mongodb";
 //login
 export const POST = async (req: NextRequest): Promise<NextResponse> => {
   try {
+    await dbConnect();
     const { email, password } = await req.json();
 
     // Check if the user exists
@@ -27,18 +28,13 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       });
     }
 
-    // Create token
-    const token = jwt.sign({ email: user.email, id: user._id }, "abcd", {
-      expiresIn: "1hr",
-    });
-
     return NextResponse.json({
       user,
-      token,
       message: "login successfull",
       status: "success",
     });
   } catch (error) {
+    console.log(error);
     return NextResponse.json({
       status: "Error",
       message: "Something Went Wrong",

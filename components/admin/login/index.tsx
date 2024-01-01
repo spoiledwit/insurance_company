@@ -9,7 +9,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const { setToken, setUser } = useAuthStore();
+  const { setUser } = useAuthStore();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -21,7 +21,6 @@ const Login = () => {
       setLoading(true);
       const response = await axios.post("api/auth/login", { email, password });
       setUser(response.data.user);
-      setToken(response.data.token);
       setLoading(false);
       toast({ title: response.data.message });
     } catch (error: any) {
