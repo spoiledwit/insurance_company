@@ -37,15 +37,10 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       status: "success",
     });
   } catch (error) {
-    return NextResponse.json(
-      {
-        status: "Error",
-        message: "Something Went Wrong",
-        error: error,
-      },
-      {
-        status: 500,
-      }
-    );
+    return NextResponse.json({
+      status: "Error",
+      message: "Something Went Wrong",
+      error: error,
+    });
   }
 };
