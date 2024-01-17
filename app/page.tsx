@@ -6,7 +6,6 @@ import Five from "@/components/Home/Five";
 import Six from "@/components/Home/Six";
 import Services from "@/components/Home/Services";
 import Contact from "@/components/Home/Contact";
-
 export default function Home() {
   return (
     <div>

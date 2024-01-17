@@ -12,9 +12,10 @@ import Link from "next/link";
 import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiChat2 } from "react-icons/ci";
+import img from "@/assets/dubai.png";
 const Footer = () => {
   return (
-    <footer className="text-[#999DA9] bg-red-800">
+    <footer className="text-gray-100 bg-red-800">
       <div className="p-5 md:p-10">
         <div className="flex justify-between items-start flex-wrap gap-8">
           <div>
@@ -29,7 +30,7 @@ const Footer = () => {
                 <Link href="">UAE Vihicles</Link>
               </li>
             </ul>
-            <h3 className="mt-5 font-semibold font-bask text-gray-200 ">
+            <h3 className="mt-5 font-semibold font-bask text-gray-100">
               Travel Insurance
             </h3>
             <ul className="space-y-3 my-2 text-sm">
@@ -46,7 +47,7 @@ const Footer = () => {
                 <Link href="">Pet Insurance</Link>
               </li>
             </ul>
-            <h3 className="text-sm mt-5 font-semibold font-bask text-gray-200 ">
+            <h3 className="text-sm mt-5 font-semibold font-bask text-gray-100 ">
               Your Secure Payment options
             </h3>
             <div className="my-2 flex space-x-2 items-center">
@@ -73,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className=" font-semibold  font-bask text-gray-200 ">Help</h3>
+            <h3 className=" font-semibold  font-bask text-gray-100 ">Help</h3>
             <ul className="space-y-3 my-2 text-sm">
               <li>
                 <Link href="">FAQ</Link>
@@ -88,7 +89,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="max-w-[230px]">
-            <h3 className=" font-semibold  font-bask  text-gray-200">
+            <h3 className=" font-semibold  font-bask  text-gray-100">
               Company
             </h3>
             <ul className="my-2 text-sm space-y-3">
@@ -111,7 +112,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-bask font-semibold text-gray-200 ">
+            <h3 className="font-bask font-semibold text-gray-100 ">
               Follow Us
             </h3>
             <ul className="mt-4 text-sm space-y-3 flex flex-col">
@@ -135,7 +136,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col xl:items-end">
-            <h1 className="font-bold text-2xl text-white">Car Insurance Co.</h1>
+            <h1 className="font-bold text-2xl text-white">Veeels.com</h1>
             <ul className="mt-4 space-y-3 flex flex-col xl:items-end text-sm">
               <li>
                 <FaPhone className="rotate-90 text-white inline mr-2" />
@@ -151,7 +152,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaWhatsapp className="inline text-lg mr-2 text-white " />
-                <a href="https://wa.me/971507114383"> +971 55 5555555</a>
+                <a href="https://wa.me/971507114383">WhatsApp</a>
               </li>
               <li className="flex items-center">
                 <FaMapMarkerAlt className="block mr-2 text-white  text-lg" />
@@ -172,16 +173,12 @@ const Footer = () => {
                 className="w-36"
               />
             </div>
-            <div className="my-3 flex items-center">
-              <img
-                src="https://www.shory.com/images/logo/mof_logo1.svg"
-                alt=""
-                className="w-10"
-              />
+            <div className="my-3 flex items-center gap-3">
+              <img src={img.src} alt="" className="w-20" />
               <div className="text-[10px] text-white">
                 <p>Licensed By</p>
-                <p>Central Bank of UAE</p>
-                <p className="text-blue-200">License Number 287</p>
+                <p>Dubai Economy Developement</p>
+                <p className="text-blue-200">License Number 909796</p>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { useState } from "react";
@@ -11,25 +11,27 @@ import personstatic from "@/assets/personstatic.png";
 import personmoving from "@/assets/personmoving.gif";
 
 const Two = () => {
-
   const [car, setCar] = useState(carMoving);
   const [quote, setQuote] = useState(quoteMoving);
   const [person, setPerson] = useState(personmoving);
 
   return (
-    <div className="my-10 flex flex-col items-center bg-white px-16">
-      <h1 className="text-[2rem] font-semibold my-10">
+    <div className="my-10 flex flex-col items-center bg-white px-8 md:px-16">
+      <h1 className="text-center text-[2rem] font-semibold my-10">
         Car Insurance as easy as 1-2-3
       </h1>
-      <div className="w-full flex justify-around">
-        <div className="w-1/4 text-center">
-          <div className="w-full h-[20vh] "
+      <div className="gap-10 md:gap-0 w-full flex flex-col md:flex-row justify-around">
+        <div className="md:w-1/4 text-center">
+          <div
+            className="w-full h-[20vh] "
             onMouseEnter={() => setCar(carMoving)}
             onMouseLeave={() => setCar(carStatic)}
           >
-          <img 
-          src={car.src}
-          alt="" className="w-full h-full object-contain" />
+            <img
+              src={car.src}
+              alt=""
+              className="w-full h-full object-contain"
+            />
           </div>
           <h1 className="font-bold text-lg mt-5 mb-2">
             Emirates ID & Vehicle Registration
@@ -40,14 +42,17 @@ const Two = () => {
             efficiently.
           </p>
         </div>
-        <div className="w-1/4 text-center">
-          <div className="w-full h-[20vh]"
-          onMouseEnter={() => setQuote(quoteMoving)}
-          onMouseLeave={() => setQuote(quoteStatic)}
+        <div className="md:w-1/4 text-center">
+          <div
+            className="w-full h-[20vh]"
+            onMouseEnter={() => setQuote(quoteMoving)}
+            onMouseLeave={() => setQuote(quoteStatic)}
           >
-            <img 
-            src={quote.src}
-            alt="" className="w-full h-full object-contain" />
+            <img
+              src={quote.src}
+              alt=""
+              className="w-full h-full object-contain"
+            />
           </div>
           <h1 className="font-bold text-lg my-3">Insurance Comparison</h1>
           <p>
@@ -55,12 +60,17 @@ const Two = () => {
             hidden costs, prioritizing your privacy and data security.
           </p>
         </div>
-        <div className="w-1/4 text-center">
-          <div className="w-full h-[20vh]"
-          onMouseEnter={() => setPerson(personmoving)}
-          onMouseLeave={() => setPerson(personstatic)}
+        <div className="md:w-1/4 text-center">
+          <div
+            className="w-full h-[20vh]"
+            onMouseEnter={() => setPerson(personmoving)}
+            onMouseLeave={() => setPerson(personstatic)}
           >
-            <img src={person.src} alt="" className="w-full h-full object-contain" />
+            <img
+              src={person.src}
+              alt=""
+              className="w-full h-full object-contain"
+            />
           </div>
           <h1 className="font-bold my-3 text-lg">Instant Insurance 24/7</h1>
           <p>
