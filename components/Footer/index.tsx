@@ -97,16 +97,16 @@ const Footer = () => {
                 <Link href="">About Us</Link>
               </li>
               <li>
-                <Link href="">Legal</Link>
+                <Link href="/legal">Legal</Link>
               </li>
               <li>
                 <Link href="">Blog</Link>
               </li>
               <li>
-                <Link href="">Privicy Policy</Link>
+                <Link href="/privacy">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="">Terms & Conditions</Link>
+                <Link href="/terms">Terms & Conditions</Link>
               </li>
             </ul>
           </div>
@@ -148,7 +148,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaEnvelope className="inline text-white  mr-2" />
-                <a href="mailto:test.com"> info@carinsurance.com</a>
+                <a href="mailto:support@veeels.com">support@veeels.com</a>
               </li>
               <li>
                 <FaWhatsapp className="inline text-lg mr-2 text-white " />

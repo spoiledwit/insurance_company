@@ -3,6 +3,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import img from "@/assets/animation1.gif";
 import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 const Hero = () => {
   return (
     <div className="w-full flex-col md:flex-row flex items-center justify-center min-h-[70vh] bg-[#fdfbfd] px-8 md:px-16">
@@ -33,9 +34,12 @@ const Hero = () => {
           Whether you're driving at home or abroad, get the coverage you need.
           Compare and choose from the best car insurance options available.
         </p>
-        <button className="mt-10 px-10 py-3 bg-red-700 text-white rounded-lg shadow-lg hover:bg-red-800">
+        <Link
+          href="#contact"
+          className="mt-10 px-10 py-3 bg-red-700 text-white rounded-lg shadow-lg hover:bg-red-800"
+        >
           Get Your Quote Now
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -46,7 +46,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white z-20 my-20 flex flex-col md:flex-row w-full px-8 md:px-16 gap-10">
+    <div
+      id="contact"
+      className="bg-white z-20 py-20 flex flex-col md:flex-row w-full px-8 md:px-16 gap-10"
+    >
       <form onSubmit={handleSubmit} className="w-full md:w-1/2">
         <h1 className="text-3xl md:text-4xl font-bold font-bask">
           Reach out to us <span className=" text-red-700 italic">Today!</span>

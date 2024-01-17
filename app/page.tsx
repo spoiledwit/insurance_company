@@ -14,7 +14,7 @@ export default function Home() {
       <Three />
       <Four />
       <Five />
-      {/* <Six /> */}
+      <Six />
       <Contact />
     </div>
   );

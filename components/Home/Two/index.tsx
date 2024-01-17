@@ -9,6 +9,7 @@ import quoteMoving from "@/assets/quotemoving.gif";
 import quoteStatic from "@/assets/quoteStatic.png";
 import personstatic from "@/assets/personstatic.png";
 import personmoving from "@/assets/personmoving.gif";
+import Link from "next/link";
 
 const Two = () => {
   const [car, setCar] = useState(carMoving);
@@ -79,9 +80,12 @@ const Two = () => {
           </p>
         </div>
       </div>
-      <button className="my-10 px-20 py-3 bg-red-700 text-white rounded-xl">
+      <Link
+        href="#contact"
+        className="my-10 px-20 py-3 bg-red-700 text-white rounded-xl"
+      >
         Get Started
-      </button>
+      </Link>
     </div>
   );
 };
