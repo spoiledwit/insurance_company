@@ -6,10 +6,10 @@ import { FaWhatsapp } from "react-icons/fa";
 const Hero = () => {
   return (
     <div className="w-full flex-col md:flex-row flex items-center justify-center min-h-[70vh] bg-[#fdfbfd] px-8 md:px-16">
-      <div className="md:w-2/5 h-[50vh] bg-white flex items-center justify-center">
+      <div className="md:w-1/2 lg:w-2/5 h-[50vh] bg-white flex items-center justify-center">
         <img src={img.src} alt="" />
       </div>
-      <div className="md:w-3/5 md:px-20">
+      <div className="md:w-1/2 lg:w-3/5 lg:px-20">
         <button className="font-bold text-sm flex items-center my-5 py-2 px-3 bg-red-700 text-white rounded-lg shadow-lg hover:bg-red-800">
           <FaWhatsapp className="text-xl mr-2" />
           <a href="https://wa.me/971507114383">WhatsApp</a>

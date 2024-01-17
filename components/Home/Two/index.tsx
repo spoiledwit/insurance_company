@@ -20,10 +20,10 @@ const Two = () => {
       <h1 className="text-center text-[2rem] font-semibold my-10">
         Car Insurance as easy as 1-2-3
       </h1>
-      <div className="gap-10 md:gap-0 w-full flex flex-col md:flex-row justify-around">
-        <div className="md:w-1/4 text-center">
+      <div className="gap-10 w-full flex flex-col md:flex-row items-center justify-around">
+        <div className="md:w-1/3 text-center h-full">
           <div
-            className="w-full h-[20vh] "
+            className="w-full h-[20vh]"
             onMouseEnter={() => setCar(carMoving)}
             onMouseLeave={() => setCar(carStatic)}
           >
@@ -42,7 +42,7 @@ const Two = () => {
             efficiently.
           </p>
         </div>
-        <div className="md:w-1/4 text-center">
+        <div className="md:w-1/3 text-center h-full">
           <div
             className="w-full h-[20vh]"
             onMouseEnter={() => setQuote(quoteMoving)}
@@ -60,7 +60,7 @@ const Two = () => {
             hidden costs, prioritizing your privacy and data security.
           </p>
         </div>
-        <div className="md:w-1/4 text-center">
+        <div className="md:w-1/3 text-center h-full">
           <div
             className="w-full h-[20vh]"
             onMouseEnter={() => setPerson(personmoving)}

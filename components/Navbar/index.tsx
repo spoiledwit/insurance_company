@@ -8,12 +8,12 @@ import Link from "next/link";
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(-1);
   return (
-    <div className="px-8 md:px-16 py-5 shadow flex justify-between w-full bg-white items-center">
-      <Link href="/" className="font-bold text-red-600 text-2xl">
+    <div className="px-5 sm:px-8 md:px-16 py-5 shadow flex justify-between w-full bg-white items-center">
+      <Link href="/" className="font-bold text-red-600 text-xl sm:text-2xl">
         Veeels.com
       </Link>
 
-      <div className="text-sm sm:text-base items-center justify-center gap-2 sm:gap-5 flex">
+      <div className="text-xs sm:text-base items-center justify-center gap-2 sm:gap-5 flex">
         {navLinks.map((link, index) => (
           <div
             key={index}

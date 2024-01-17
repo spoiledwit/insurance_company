@@ -8,14 +8,14 @@ const Three = () => {
         Types of car insurance
       </h1>
       <div className="flex w-full flex-col md:flex-row justify-center">
-        <div className="md:w-1/3 h-[50vh]">
+        <div className="md:w-1/2 lg:w-1/3 h-[50vh]">
           <img
             src={carAnim.src}
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="md:w-1/3 px-10">
+        <div className="md:w-1/2 lg:w-1/3 px-10">
           <h1 className="font-bold text-2xl my-3">
             Full Coverage Car Insurance
           </h1>

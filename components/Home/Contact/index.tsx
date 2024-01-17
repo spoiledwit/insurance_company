@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white z-20 mx-8 mt-10 md:mx-32 flex flex-col md:flex-row md:w-full rounded-3xl pb-10">
+    <div className="bg-white z-20 my-20 flex flex-col md:flex-row w-full px-8 md:px-16 gap-10">
       <form onSubmit={handleSubmit} className="w-full md:w-1/2">
         <h1 className="text-3xl md:text-4xl font-bold font-bask">
           Reach out to us <span className=" text-red-700 italic">Today!</span>
@@ -93,7 +93,7 @@ const Contact = () => {
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925023.2110865188!2d54.45745035199832!3d25.089268642364733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b1b346b349d%3A0xf8b793663cbfe82b!2sCar%20Insurance%20Dubai%20%26%20UAE%20-%20BuyAnyInsurance!5e0!3m2!1sen!2s!4v1702322573349!5m2!1sen!2s"
         loading="lazy"
-        className="mt-10 h-[400px] md:ml-10 md:w-1/3"
+        className="h-[50vh] w-full md:w-1/2"
       ></iframe>
     </div>
   );

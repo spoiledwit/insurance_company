@@ -1,19 +1,19 @@
 export const navLinks = [
   {
     title: "Company",
-    href: "/company",
+    href: "/company/about",
     children: [
       {
         title: "About Us",
-        href: "company/about",
+        href: "/company/about",
       },
       {
         title: "Legal",
-        href: "company/legal",
+        href: "/company/legal",
       },
       {
         title: "Blog",
-        href: "company/blog",
+        href: "/company/blog",
       },
     ],
   },
@@ -23,11 +23,11 @@ export const navLinks = [
     children: [
       {
         title: "FAQ",
-        href: "support/faq",
+        href: "/support/faq",
       },
       {
         title: "Live Chat",
-        href: "support/live-chat",
+        href: "/support/live-chat",
       },
     ],
   },
