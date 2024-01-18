@@ -32,6 +32,7 @@ const Contact = () => {
     e.preventDefault();
     if (!data.fname || !data.lname || !data.email || !data.message) {
       toast({ title: "Please fill all fields" });
+      setLoading(false);
       return;
     }
     const response = await axios.post(`/api/contact`, data);

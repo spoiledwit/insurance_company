@@ -11,10 +11,6 @@ const Hero = () => {
         <img src={img.src} alt="" />
       </div>
       <div className="md:w-1/2 lg:w-3/5 lg:px-20">
-        <button className="font-bold text-sm flex items-center my-5 py-2 px-3 bg-red-700 text-white rounded-lg shadow-lg hover:bg-red-800">
-          <FaWhatsapp className="text-xl mr-2" />
-          <a href="https://wa.me/971507114383">WhatsApp</a>
-        </button>
         <p className="text-lg font-semibold text-red-600">
           Comprehensive Car Insurance.
         </p>

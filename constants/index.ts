@@ -21,6 +21,29 @@ export const navLinks = [
         title: "FAQ",
         href: "/faq",
       },
+      {
+        title: "Contact",
+        href: "/support",
+      },
     ],
+  },
+];
+
+export const navLinksMobile = [
+  {
+    title: "About Us",
+    href: "/company/about",
+  },
+  {
+    title: "FAQ",
+    href: "/faq",
+  },
+  {
+    title: "Contact",
+    href: "/support",
+  },
+  {
+    title: "Legal",
+    href: "/legal",
   },
 ];

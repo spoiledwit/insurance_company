@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="p-5 md:p-10">
         <div className="flex justify-between items-start flex-wrap gap-8">
           <div>
-            <h3 className="text-gray-200 font-semibold  font-bask ">
+            {/* <h3 className="text-gray-200 font-semibold  font-bask ">
               Car Insurance
             </h3>
             <ul className="space-y-3 my-2 text-sm">
@@ -29,8 +29,8 @@ const Footer = () => {
               <li>
                 <Link href="">UAE Vihicles</Link>
               </li>
-            </ul>
-            <h3 className="mt-5 font-semibold font-bask text-gray-100">
+            </ul> */}
+            {/* <h3 className="mt-5 font-semibold font-bask text-gray-100">
               Travel Insurance
             </h3>
             <ul className="space-y-3 my-2 text-sm">
@@ -46,8 +46,8 @@ const Footer = () => {
               <li>
                 <Link href="">Pet Insurance</Link>
               </li>
-            </ul>
-            <h3 className="text-sm mt-5 font-semibold font-bask text-gray-100 ">
+            </ul> */}
+            <h3 className="text-sm font-semibold font-bask text-gray-100 ">
               Your Secure Payment options
             </h3>
             <div className="my-2 flex space-x-2 items-center">
@@ -77,15 +77,18 @@ const Footer = () => {
             <h3 className=" font-semibold  font-bask text-gray-100 ">Help</h3>
             <ul className="space-y-3 my-2 text-sm">
               <li>
-                <Link href="">FAQ</Link>
-              </li>
-              <li className="flex items-center space-x-1">
-                <CiChat2 className="text-white text-lg" />
-                <Link href="">Live Chat</Link>
+                <Link href="/faq">FAQ</Link>
               </li>
               <li>
-                <Link href="">Sitemap</Link>
+                <Link href="/support">Contact Us</Link>
               </li>
+              {/* <li className="flex items-center space-x-1">
+                <CiChat2 className="text-white text-lg" />
+                <Link href="">Live Chat</Link>
+              </li> */}
+              {/* <li>
+                <Link href="">Sitemap</Link>
+              </li> */}
             </ul>
           </div>
           <div className="max-w-[230px]">
@@ -94,14 +97,14 @@ const Footer = () => {
             </h3>
             <ul className="my-2 text-sm space-y-3">
               <li>
-                <Link href="">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/legal">Legal</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="">Blog</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/privacy">Privacy Policy</Link>
               </li>
