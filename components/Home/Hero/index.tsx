@@ -30,12 +30,11 @@ const Hero = () => {
           Whether you're driving at home or abroad, get the coverage you need.
           Compare and choose from the best car insurance options available.
         </p>
-        <Link
-          href="#contact"
-          className="mt-10 px-10 py-3 bg-red-700 text-white rounded-lg shadow-lg hover:bg-red-800"
-        >
+        <a 
+        href="#contact"
+        className="mt-10 px-10 py-3 bg-red-700 text-white rounded-lg shadow-lg hover:bg-red-800">
           Get Your Quote Now
-        </Link>
+        </a>
       </div>
     </div>
   );
