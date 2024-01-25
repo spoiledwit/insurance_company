@@ -2,6 +2,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import img from "@/assets/animation1.gif";
+
 import Popup from "./Popup";
 
 const Hero = () => {
