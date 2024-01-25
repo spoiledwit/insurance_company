@@ -10,7 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import axios from "axios";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "react-hot-toast";
 import * as exceljs from "exceljs";
 import { saveAs } from "file-saver";
 
@@ -57,7 +57,7 @@ const Contacts = () => {
     });
     const buf = await workbook.xlsx.writeBuffer();
     saveAs(new Blob([buf]), "Contacts.xlsx");
-    toast({ title: "Downloaded Sussessfully" });
+    toast.success("Downloaded Sussessfully");
   };
 
   return (

@@ -5,10 +5,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import axios from "axios";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     fname: "",
@@ -31,12 +30,12 @@ const Contact = () => {
     setLoading(true);
     e.preventDefault();
     if (!data.fname || !data.lname || !data.email || !data.message) {
-      toast({ title: "Please fill all fields" });
+      toast.error("Please fill all fields");
       setLoading(false);
       return;
     }
     const response = await axios.post(`/api/contact`, data);
-    toast({ title: response.data.message });
+    toast.success(response.data.message);
     setData({
       fname: "",
       lname: "",

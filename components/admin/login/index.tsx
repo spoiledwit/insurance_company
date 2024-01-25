@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import useAuthStore from "@/store/authStore";
 import { useState } from "react";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (!email || !password) {
-      toast({ title: "Please fill all the fields" });
+      toast.error("Please fill all the fields");
       return;
     }
     try {
@@ -22,11 +22,11 @@ const Login = () => {
       const response = await axios.post("api/auth/login", { email, password });
       setUser(response.data.user);
       setLoading(false);
-      toast({ title: response.data.message });
+      toast.success(response.data.message);
     } catch (error: any) {
       setLoading(false);
       if (error.response?.data) {
-        toast({ title: error.response.data });
+        toast.error(error.response.data);
         return;
       }
     }
