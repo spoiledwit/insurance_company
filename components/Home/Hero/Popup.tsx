@@ -360,7 +360,7 @@ const Popup = () => {
             </p>
           </div>
         )}
-        <form onSubmit={handleSubmmit} className="sm:mt-5">
+        <form onSubmit={handleSubmmit} className="mt-5">
           {step === 0 && (
             <div className="space-y-3 sm:space-y-6 flex flex-col">
               <div className="flex w-full gap-3 sm:gap-5 flex-col sm:flex-row">
@@ -458,8 +458,7 @@ const Popup = () => {
               <div className="w-full">
                 <p className="mb-2 text-sm sm:mt-10">
                   Are you looking for fully comprehensive insurance or third
-                  party insuranceAre you looking for fully comprehensive
-                  insurance or third party insurance?
+                  party insurance?
                 </p>
                 <Select onValueChange={(e) => setInsurance(e)}>
                   <SelectTrigger>
