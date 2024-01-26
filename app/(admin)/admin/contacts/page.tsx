@@ -13,12 +13,11 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import * as exceljs from "exceljs";
 import { saveAs } from "file-saver";
-
-const Contacts = () => {
+const page = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("api/contact");
+      const response = await axios.get("/api/contact");
       setData(response.data.result);
     };
     getData();
@@ -61,7 +60,7 @@ const Contacts = () => {
   };
 
   return (
-    <div className="px-16 min-h-screen">
+    <div className=" px-8 md:px-16 min-h-screen">
       <div className="my-10 flex justify-between w-full">
         <h1 className="font-bold text-4xl text-red-600">Contacts</h1>
         <button
@@ -97,4 +96,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default page;

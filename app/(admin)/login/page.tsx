@@ -19,10 +19,13 @@ const Login = () => {
     }
     try {
       setLoading(true);
-      const response = await axios.post("api/auth/login", { email, password });
+      const response = await axios.post("/api/auth/login", {
+        email,
+        password,
+      });
       setUser(response.data.user);
       setLoading(false);
-      toast.success(response.data.message);
+      toast(response.data.message);
     } catch (error: any) {
       setLoading(false);
       if (error.response?.data) {
