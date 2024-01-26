@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <div className="h-[90vh] flex items-center justify-center">
+    <div className="h-[80vh] flex items-center justify-center">
       <form
         onSubmit={(e) => handleSubmit(e)}
         className="md:w-1/2 md:border p-10 md:shadow"
