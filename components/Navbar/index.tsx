@@ -17,7 +17,7 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(-1);
   return (
     <div className="px-5 sm:px-8 md:px-16 py-5 shadow flex justify-between w-full bg-white items-center">
-      <Link href="/" className="font-bold text-red-600 text-xl sm:text-2xl">
+      <Link href="/" className="font-bold text-red-700 text-xl sm:text-2xl">
         Veeels.com
       </Link>
 

@@ -164,18 +164,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <div className="my-3 flex items-center space-x-2">
-              <img
-                src="https://www.shory.com/images/support/play-store.svg"
-                alt="1"
-                className="w-36"
-              />
-              <img
-                src="https://www.shory.com/images/support/app-store.svg"
-                alt="2"
-                className="w-36"
-              />
-            </div>
             <div className="my-3 flex items-center gap-3">
               <img src={img.src} alt="" className="w-20" />
               <div className="text-[10px] text-white">

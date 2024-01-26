@@ -62,9 +62,9 @@ const page = () => {
   return (
     <div className=" px-8 md:px-16 min-h-screen">
       <div className="my-10 flex justify-between w-full">
-        <h1 className="font-bold text-4xl text-red-600">Contacts</h1>
+        <h1 className="font-bold text-4xl text-red-700">Contacts</h1>
         <button
-          className="p-2 text-white bg-red-600 h-fit rounded-lg"
+          className="p-2 text-white bg-red-700 h-fit rounded-lg"
           onClick={download}
         >
           Download Data

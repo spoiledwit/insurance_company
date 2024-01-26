@@ -5,3 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+#_proprofs_trk_inner_footer_ a {
+  display: none !important;
+}

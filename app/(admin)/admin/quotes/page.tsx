@@ -10,7 +10,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 const page = () => {
+  const router = useRouter();
   const [data, setData] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -19,11 +21,10 @@ const page = () => {
     };
     getData();
   }, []);
-
   return (
     <div className="px-8 md:px-16 min-h-screen overflow-hidden">
-      <h1 className="my-10 font-bold text-4xl text-red-600">Quotes</h1>
-      <Table className="text-sm whitespace-nowrap">
+      <h1 className="my-10 font-bold text-4xl text-red-700">Quotes</h1>
+      <Table className="text-sm whitespace-nowrap mb-5">
         <TableCaption>A list of incoming inquiries.</TableCaption>
         <TableHeader>
           <TableRow>
@@ -43,7 +44,10 @@ const page = () => {
         </TableHeader>
         <TableBody>
           {data?.map((d: any) => (
-            <TableRow>
+            <TableRow
+              className="cursor-pointer hover:bg-red-100 transition duration-100"
+              onClick={() => router.push(`/admin/quotes/${d._id}`)}
+            >
               <TableCell>{d.fname}</TableCell>
               <TableCell>{d.lname}</TableCell>
               <TableCell>{d.email}</TableCell>
