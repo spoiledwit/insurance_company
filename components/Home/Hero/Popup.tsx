@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "react-hot-toast";
 import { set } from "mongoose";
+import axios from "axios";
 
 const UAELiscenceValues = [
   {
@@ -284,7 +285,7 @@ const countries = [
 
 const Popup = () => {
   const [step, setStep] = useState(1);
-  const [UAELiscence, setUAELiscence] = useState("");
+  const [uaeLiscence, setUAELiscence] = useState("");
   const [check, setCheck] = useState(false);
   const [homeCountryLiscence, setHomeCountryLiscence] = useState("");
   const [emirateOfRegistration, setEmirateOfRegistration] = useState("");
@@ -298,17 +299,18 @@ const Popup = () => {
   const [phone, setPhone] = useState("");
   const [dob, setDob] = useState("");
   const [nationality, setNationality] = useState("");
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const value = UAELiscenceValues.find(
-      (value) => value.value === UAELiscence
+      (value) => value.value === uaeLiscence
     );
     if (value) {
       setCheck(value.homeCountry);
     }
-  }, [UAELiscence]);
+  }, [uaeLiscence]);
   const handleSubmmit = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
     if (!fname || !lname || !email || !phone || !dob || !nationality) {
       toast.error("Please fill all the fields");
       return;
@@ -317,14 +319,15 @@ const Popup = () => {
       toast.error("You must be 18 years or older to apply for insurance");
       return;
     }
-    console.log({
+
+    const response = await axios.post("/api/quotes", {
       fname,
       lname,
       email,
       phone,
       dob,
       nationality,
-      UAELiscence,
+      uaeLiscence,
       homeCountryLiscence,
       emirateOfRegistration,
       yearOfRegistration,
@@ -332,7 +335,22 @@ const Popup = () => {
       vehicleModel,
       insurance,
     });
+    toast.success(response.data.message);
+    setFname("");
+    setLname("");
+    setEmail("");
+    setPhone("");
+    setDob("");
+    setNationality("");
+    setUAELiscence("");
+    setHomeCountryLiscence("");
+    setEmirateOfRegistration("");
+    setYearOfRegistration("");
+    setVehicleMake("");
+    setVehicleModel("");
+    setInsurance("");
     setStep(2);
+    setLoading(false);
   };
 
   return (
@@ -479,7 +497,7 @@ const Popup = () => {
                 className="bg-red-700 text-white py-3 text-lg"
                 onClick={() => {
                   if (
-                    !UAELiscence ||
+                    !uaeLiscence ||
                     !emirateOfRegistration ||
                     !yearOfRegistration ||
                     !vehicleMake ||
