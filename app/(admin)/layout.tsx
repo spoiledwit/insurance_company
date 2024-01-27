@@ -6,7 +6,7 @@ import Login from "./login/page";
 export default function layout({ children }: { children: React.ReactNode }) {
   const { user } = useAuthStore();
 
-  if (!user) return <Login />;
+  // if (!user) return <Login />;
 
   return <div>{children}</div>;
 }

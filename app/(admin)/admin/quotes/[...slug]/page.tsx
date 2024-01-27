@@ -53,18 +53,18 @@ const page = ({ params }: Props) => {
         </button>
       </div>
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-3 shadow-lg p-5 border rounded-2xl">
-        <div>
-          <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
+          <h1 className="flex items-center gap-2 text-red-700 font-bold text-xl">
             <span className="text-red-700">
-              <IoPerson />
+              <IoPerson /> {/* Adjust size as needed */}
             </span>
             <span>Name</span>
           </h1>
-          <p className="text-lg mt-1">
+          <p className="text-lg mt-2">
             {data?.fname} {data?.lname}
           </p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <MdEmail />
@@ -73,7 +73,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.email}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <FaPhoneAlt />
@@ -82,7 +82,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.phone}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <MdDateRange />
@@ -91,7 +91,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.dob}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <FaPassport />
@@ -100,7 +100,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.nationality}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <FaAddressCard />
@@ -109,7 +109,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.uaeLiscence}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <FaAddressCard />
@@ -118,7 +118,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.homeCountryLiscence}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <SiEmirates />
@@ -127,7 +127,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.emirateOfRegistration}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <MdDateRange />
@@ -136,7 +136,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.yearOfRegistration}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <FaCarAlt />
@@ -145,7 +145,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.vehicleMake}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <FaCarAlt />
@@ -154,7 +154,7 @@ const page = ({ params }: Props) => {
           </h1>
           <p className="text-lg mt-1">{data?.vehicleModel}</p>
         </div>
-        <div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
               <SiAdguard />
