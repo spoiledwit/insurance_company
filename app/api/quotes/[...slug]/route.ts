@@ -3,13 +3,18 @@ import dbConnect from "@/lib/db/mongodb";
 import Quotes from "@/lib/db/models/quotes";
 import nodemailer from "nodemailer";
 import { emailTemplate } from "@/lib/utils/emailTemplate";
-export const POST = async (
+
+export const PUT = async (
   req: NextRequest,
   { params }: { params: { slug: Array<[]> } }
 ): Promise<NextResponse> => {
   try {
     await dbConnect();
     const id = params.slug[0];
+    const { isReplied } = await req.json();
+    const result = await Quotes.findByIdAndUpdate(id, {
+      isReplied,
+    });
     const {
       fname,
       lname,
@@ -58,6 +63,7 @@ export const POST = async (
     return NextResponse.json({
       message: "Email Sent Successfully",
       status: "success",
+      result,
     });
   } catch (error) {
     return NextResponse.json(

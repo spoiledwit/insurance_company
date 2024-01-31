@@ -31,7 +31,9 @@ const page = ({ params }: Props) => {
   const sendEmail = async () => {
     setLoading(true);
     try {
-      const response = await axios.post(`/api/quotes/${slug[0]}`);
+      const response = await axios.put(`/api/quotes/${slug[0]}`, {
+        isReplied: true,
+      });
       toast.success(response.data.message);
       setLoading(false);
     } catch (err: any) {
