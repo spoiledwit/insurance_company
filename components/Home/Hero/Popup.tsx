@@ -310,6 +310,21 @@ const Popup = () => {
   }, [uaeLiscence]);
   const handleSubmmit = async (e: any) => {
     e.preventDefault();
+    console.log({
+      fname,
+      lname,
+      email,
+      phone,
+      dob,
+      nationality,
+      uaeLiscence,
+      homeCountryLiscence,
+      emirateOfRegistration,
+      yearOfRegistration,
+      vehicleMake,
+      vehicleModel,
+      insurance,
+    });
     setLoading(true);
     if (!fname || !lname || !email || !phone || !dob || !nationality) {
       toast.error("Please fill all the fields");
