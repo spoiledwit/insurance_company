@@ -292,6 +292,7 @@ const Popup = () => {
   const [yearOfRegistration, setYearOfRegistration] = useState("");
   const [vehicleMake, setVehicleMake] = useState("");
   const [vehicleModel, setVehicleModel] = useState("");
+  const [vehicleYear, setVehicleYear] = useState("");
   const [insurance, setInsurance] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -319,6 +320,7 @@ const Popup = () => {
       nationality,
       uaeLiscence,
       homeCountryLiscence,
+      vehicleYear,
       emirateOfRegistration,
       yearOfRegistration,
       vehicleMake,
@@ -342,6 +344,7 @@ const Popup = () => {
       phone,
       dob,
       nationality,
+      vehicleYear,
       uaeLiscence,
       homeCountryLiscence,
       emirateOfRegistration,
@@ -357,6 +360,7 @@ const Popup = () => {
     setPhone("");
     setDob("");
     setNationality("");
+    setVehicleYear("");
     setUAELiscence("");
     setHomeCountryLiscence("");
     setEmirateOfRegistration("");
@@ -470,7 +474,7 @@ const Popup = () => {
                     <p className="mb-1 text-sm sm:text-base">Car Make</p>
                     <input
                       type="text"
-                      placeholder="e.g. Toyota"
+                      placeholder=""
                       value={vehicleMake}
                       onChange={(e) => setVehicleMake(e.target.value)}
                       className="border-b border-black p-2 outline-none w-full"
@@ -480,9 +484,19 @@ const Popup = () => {
                     <p className="mb-1 text-sm sm:text-base">Car Model</p>
                     <input
                       type="text"
-                      placeholder="e.g. 2021"
+                      placeholder=""
                       value={vehicleModel}
                       onChange={(e) => setVehicleModel(e.target.value)}
+                      className="border-b border-black p-2 outline-none w-full"
+                    />
+                  </div>
+                  <div className="w-full">
+                    <p className="mb-1 text-sm sm:text-base">Car Year</p>
+                    <input
+                      type="text"
+                      placeholder=""
+                      value={vehicleYear}
+                      onChange={(e) => setVehicleYear(e.target.value)}
                       className="border-b border-black p-2 outline-none w-full"
                     />
                   </div>

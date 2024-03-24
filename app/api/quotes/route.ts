@@ -41,6 +41,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       yearOfRegistration,
       vehicleMake,
       vehicleModel,
+      vehicleYear,
       insurance,
     } = await req.json();
     const result = await Qoutes.create({
@@ -54,6 +55,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       homeCountryLiscence,
       emirateOfRegistration,
       yearOfRegistration,
+      vehicleYear,
       vehicleMake,
       vehicleModel,
       insurance,

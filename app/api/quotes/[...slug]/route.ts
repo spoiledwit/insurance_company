@@ -27,6 +27,7 @@ export const PUT = async (
       emirateOfRegistration,
       yearOfRegistration,
       vehicleMake,
+      vehicleYear,
       vehicleModel,
       insurance,
     } = await Quotes.findById(id);

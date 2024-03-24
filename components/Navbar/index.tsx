@@ -4,6 +4,7 @@ import { navLinks, navLinksMobile } from "@/constants";
 import { BiSolidChevronDown } from "react-icons/bi";
 import { FaBars, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import logo from "@/assets/veels.jpg";
 import {
   Sheet,
   SheetContent,

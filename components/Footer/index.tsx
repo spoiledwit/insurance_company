@@ -8,10 +8,10 @@ import {
   FaWhatsapp,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import logo from "@/assets/veelsWhite.png";
 import Link from "next/link";
 import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
-import { CiChat2 } from "react-icons/ci";
 import img from "@/assets/dubai.png";
 const Footer = () => {
   return (
@@ -19,34 +19,7 @@ const Footer = () => {
       <div className="p-5 md:p-10">
         <div className="flex justify-between items-start flex-wrap gap-8">
           <div>
-            {/* <h3 className="text-gray-200 font-semibold  font-bask ">
-              Car Insurance
-            </h3>
-            <ul className="space-y-3 my-2 text-sm">
-              <li>
-                <Link href="">Non-UAE Vihicles</Link>
-              </li>
-              <li>
-                <Link href="">UAE Vihicles</Link>
-              </li>
-            </ul> */}
-            {/* <h3 className="mt-5 font-semibold font-bask text-gray-100">
-              Travel Insurance
-            </h3>
-            <ul className="space-y-3 my-2 text-sm">
-              <li>
-                <Link href="">Inbound Visit Visa</Link>
-              </li>
-              <li>
-                <Link href="">Health Insurance</Link>
-              </li>
-              <li>
-                <Link href="">Home Insurance</Link>
-              </li>
-              <li>
-                <Link href="">Pet Insurance</Link>
-              </li>
-            </ul> */}
+            <img src={logo.src} alt="logo" className="w-32" />
             <h3 className="text-sm font-semibold font-bask text-gray-100 ">
               Your Secure Payment options
             </h3>
@@ -97,7 +70,7 @@ const Footer = () => {
             </h3>
             <ul className="my-2 text-sm space-y-3">
               <li>
-                <Link href="/about">About Us</Link>
+                <Link href="/company/about">About Us</Link>
               </li>
               <li>
                 <Link href="/legal">Legal</Link>
@@ -121,19 +94,21 @@ const Footer = () => {
             <ul className="mt-4 text-sm space-y-3 flex flex-col">
               <li className="flex items-center space-x-2">
                 <FaFacebook className="text-white text-lg" />
-                <a href="">Facebook</a>
+                <a href="https://www.facebook.com/profile.php?id=61555890418092"
+                  target="_blank"
+                >Facebook</a>
               </li>
               <li className="flex items-center space-x-2">
                 <FaInstagram className="text-white text-lg" />
-                <a href="">Instagram</a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <FaXTwitter className="text-white text-lg" />
-                <a href="">Twitter</a>
+                <a href="https://www.instagram.com/veeels_official/"
+                  target="_blank"
+                >Instagram</a>
               </li>
               <li className="flex items-center space-x-2">
                 <FaLinkedinIn className="text-white text-lg" />
-                <a href="">Linked In</a>
+                <a href="https://www.linkedin.com/company/101528153"
+                  target="_blank"
+                >Linked In</a>
               </li>
             </ul>
           </div>
@@ -173,18 +148,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="mt-3 text-xs">
-          <p>
-            Car Insurance LLC is authorized and regulated by the Central Bank of
-            the UAE. Car Insurance Brokers is a licensed broker by the Central
-            Bank with License Number 287.
-          </p>
-          <p>
-            Car Insurance Brokers LLC is located in International city france
-            cluster p24 office s 11, Dubai, UAE. © 2023 Car Insurance Co. All
-            rights reserved.
-          </p>
         </div>
       </div>
     </footer>

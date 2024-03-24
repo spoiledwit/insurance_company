@@ -159,6 +159,15 @@ const page = ({ params }: Props) => {
         <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
           <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
             <span className="text-red-700">
+              <FaCarAlt />
+            </span>
+            <span>Vehicle Year</span>
+          </h1>
+          <p className="text-lg mt-1">{data?.vehicleYear}</p>
+        </div>
+        <div className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg p-4">
+          <h1 className="flex items-center gap-2 mt-5 text-red-700 font-bold text-xl">
+            <span className="text-red-700">
               <SiAdguard />
             </span>
             <span>Insurance Type</span>
